@@ -34,8 +34,8 @@ options.add_argument('--allow-running-insecure-content')
 options.add_argument('--disable-web-security')
 #options.add_argument('--no-sandbox')
 options.add_argument('--load-images=false')
-options.add_argument('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/67.0.3396.87 Safari/537.36')
-driver = webdriver.Chrome(executable_path='/home/ubuntu/bin/chromedriver', chrome_options=options)
+options.add_argument('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+driver = webdriver.Chrome(executable_path='/xxxxxxxxxxxxxxxxxx/chromedriver', chrome_options=options)
 
 area_png = os.path.join(os.path.dirname(os.path.abspath(__file__)), "area.PNG")
 house_png = os.path.join(os.path.dirname(os.path.abspath(__file__)), "house.PNG")
@@ -646,8 +646,9 @@ if __name__ == '__main__':
     ]
     if len(datas)!=0:
         df = pd.DataFrame(datas)
-        df.to_csv('/home/ubuntu/bnbch/csv/bnb_osaka_180825_'+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'.csv', sep=',',encoding='UTF-8',index=False, quoting=csv.QUOTE_ALL, columns=column_order)
-        df.to_csv('/home/ubuntu/bnbch/csv/bnb_osaka_180825_'+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'.tsv', sep='\t',encoding='UTF-8',index=False, quoting=csv.QUOTE_ALL, columns=column_order)
+        df.to_csv('/xxxxxxxxxxxx/bnbch/csv/bnb_osaka_180825_'+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'.csv', sep=',',encoding='UTF-8',index=False, quoting=csv.QUOTE_ALL, columns=column_order)
+        df.to_csv('/xxxxxxxxxxxx/bnbch/csv/bnb_osaka_180825_'+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'.tsv', sep='\t',encoding='UTF-8',index=False, quoting=csv.QUOTE_ALL, columns=column_order)
+        df.to_json('/xxxxxxxx/bnbch/csv/bnb_osaka_180825_'+datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'.json', force_ascii=False)
     
     end = time.time()
     print("process {0} ms".format((end - start) * 1000))
