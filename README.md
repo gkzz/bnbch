@@ -42,5 +42,5 @@ python --version
 Python 3.6.5
 Ubuntu 16.04
 
-## If you face trouble...
+## If You're Faced with Some Troubles...
 plz give me comments!
